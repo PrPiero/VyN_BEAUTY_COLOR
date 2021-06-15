@@ -55,7 +55,7 @@
                             <h2>Nuestro servicio personalizado se traduce en un trato amable
                                 y empatico hacia el cliente </h2><br><br>
 
-                            <button name="showcita" id="showcita" type="button" role="link" onclick="window.location='{{ route('citas.create') }}'">Reservar una cita</button>
+                            <button type="button" role="link" onclick="window.location='{{ route('citas.create') }}'">Reservar una cita</button>
                         </section>
                     </li>
                     <li>
@@ -67,7 +67,7 @@
                             <h2>Nuestro servicio personalizado se traduce en un trato amable
                                 y empatico hacia el cliente
                             </h2><br><br>
-                            <button>Reservar una cita</button>
+                            <button type="button" role="link" onclick="window.location='{{ route('citas.create') }}'">Reservar una cita</button>
                         </section>
 
                     </li>

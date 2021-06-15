@@ -29,7 +29,7 @@
         <div class="collapse navbar-collapse" id="navbarColor01">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item active" style='font-size: 24pt;'>
-            <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="{{ route('index') }}">Inicio <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item" style='font-size: 24pt;'>
             <a class="nav-link" href="/ReservarCita/Create">Servicios</a>
