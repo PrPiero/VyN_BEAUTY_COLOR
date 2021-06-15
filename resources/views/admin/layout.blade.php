@@ -102,7 +102,7 @@
         <!-- Main Footer -->
         <footer class="main-footer">
             <!-- Default to the left -->
-            <strong>Copyright &copy; 2021 <a href="#"><b>V&N BEAUTY COLOR</b></a>.</strong> Todos los derechos reservados.
+            <strong>Copyright &copy; 2021 <a href="{{ route('index') }}"><b>V&N BEAUTY COLOR</b></a>.</strong> Todos los derechos reservados.
         </footer>
     </div>
     <!-- ./wrapper -->
