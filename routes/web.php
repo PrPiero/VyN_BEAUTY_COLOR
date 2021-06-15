@@ -5,13 +5,14 @@ use App\Http\Controllers\CitasController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
+Route::get('', function(){
+    return view('ecommerce');
+})->name('index');
+
 // Reservar Cita...
 Route::get('ReservarCita', [CitasController::class, 'index'] )->name('citas.index');
-
 Route::get('ReservarCita/Create', [CitasController::class, 'create'] )->name('citas.create');
-
 Route::post('ReservarCita', [CitasController::class, 'store'] )->name('citas.store');
-
 Route::get('ReservarCita/Show', [CitasController::class, 'show'] )->name('citas.show');
 
 // Admin Routes...

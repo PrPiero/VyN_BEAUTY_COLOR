@@ -1,13 +1,13 @@
 @extends('layouts.principal')
 @section('titulo','Reservar Cita')
-@section('contenido') 
+@section('contenido')
     <link rel="stylesheet" href="../css/app.css">
     <form action="{{route('citas.store')}}" method="POST">
         @csrf
         <div class="container">
             <div class="row">
                 <div class="pt-5">
-                    <div class="col-sm p-4"> 
+                    <div class="col-sm p-4">
                         <img src="../img/horarios.JPG" width="260" height="360">
                     </div>
                 </div>
@@ -15,12 +15,12 @@
                         <label class="pt-2">Para hacer una cita o reservación debes llenar todos los campos indicados a continuación para poder atenderte mejor.
                          Una vez realizada tu reserva nos estaremos comunicando contigo para confirmar la misma.</label>
                         <div class="row p-2">
-                            
+
                             <div class="pl-2">
-                                Nombreas y Apellidos* <input name="cliente" type="text" required>
+                                Nombres y Apellidos* <input name="cliente" type="text" required>
                             </div>
                             <div class="pl-2 pb-4">
-                                Telefono Contacto* <input name="telefono" type="number" required>
+                            Telefono Contacto*<input name="telefono" type="number" maxlength="9" minlength="7" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" /><i>(Máximo 9 dígitos)</i>
                             </div>
                             <div class="pl-2 pb-2">
                                 Correo Electronico* <input name="email" type="email" required>
@@ -39,16 +39,15 @@
                                 <textarea name="descripcion" id="" cols="30" rows="10" required></textarea>
                             </div>
                             <div>
-                              <button type="submit" class="btn btn-secondary">ENVIAR</button>  
+                              <button type="submit" class="btn btn-secondary">ENVIAR</button>
                             </div>
                         </div>
-                        
                 </div>
             </div>
         </div>
-        
+
     </form>
-    @isset($MENSAJE)
-        <div class="msjenv">{{$MENSAJE}}</div>
-    @endisset
+    @if(session()->has('MENSAJE'))
+        <div class="msjenv">{{ session('MENSAJE')}}</div>
+    @endif
 @endsection

@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Citas;
+use App\Models\Quote;
 use app\Http\Controllers\HomeController;
 use Illuminate\Http\Request;
 
@@ -10,24 +10,25 @@ class CitasController extends Controller
     public function index(){
         return view('citas.index');
     }
-    
+
     public function create(){
         return view('citas.create');
     }
 
     public function store(Request $request){
-        
-        $Citas = new Citas();
-        $Citas->cliente = $request->cliente;
-        $Citas->telefono = $request->telefono;
+
+        $Citas = new Quote();
+        $Citas->client = $request->cliente;
+        $Citas->phone = $request->telefono;
         $Citas->email = $request->email;
-        $Citas->fecha = $request->fecha;
-        $Citas->descripcion = $request->descripcion;
+        $Citas->date = $request->fecha;
+        $Citas->description = $request->descripcion;
+        $Citas->state = "Pendiente";
         $Citas->save();
 
-        return view('citas.create')->with('MENSAJE','YA SE RESERVO SU CITA.. LO LLAMAREMOS');
-    }   
-    
+        return redirect()->route('citas.create')->with('MENSAJE','YA SE RESERVO SU CITA.. LO LLAMAREMOS');
+    }
+
     public function show(){
 
     }

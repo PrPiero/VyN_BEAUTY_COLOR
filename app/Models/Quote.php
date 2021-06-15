@@ -16,12 +16,12 @@ class Quote extends Model
         'email',
         'date',
         'description',
-        'service',
+        //'service',
         'state'
     ];
 
-    public function service()
+    /*public function service()
     {
         return $this->belongsTo(Service::class);
-    }
+    }*/
 }

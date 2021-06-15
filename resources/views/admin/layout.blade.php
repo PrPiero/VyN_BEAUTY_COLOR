@@ -219,7 +219,7 @@
                 $('#txtEmail').val(cita[0].email);
                 $('#txtDate').val(cita[0].date);
                 $('#txtDescription').val(cita[0].description);
-                $('#txtService').val(cita[0].service.service);
+                //$('#txtService').val(cita[0].service.service);
                 $('#txtState').val(cita[0].state);
                 $("input[name=_token]").val();
                 $('#QuoteModal').modal('toggle');
@@ -245,7 +245,7 @@
                 var email2 = $('#txtEmail').val();
                 var date2 = $('#txtDate').val();
                 var description2 = $('#txtDescription').val();
-                var service_id2 = $('#txtService').val();
+                //var service_id2 = $('#txtService').val();
                 var state2 = $('#txtState').val();
                 var _token2 = $("input[name=_token]").val();
                 var validation;
@@ -270,7 +270,7 @@
                         email: email2,
                         date: date2,
                         description: description2,
-                        service_id: service_id2,
+                        //service_id: service_id2,
                         state: state2,
                         _token: _token2
                     },
@@ -295,7 +295,7 @@
                 var email2 = $('#txtEmail').val();
                 var date2 = $('#txtDate').val();
                 var description2 = $('#txtDescription').val();
-                var service_id2 = $('#txtService').val();
+                //var service_id2 = $('#txtService').val();
                 var state2 = $('#txtState').val();
                 var _token2 = $("input[name=_token]").val();
 
@@ -309,7 +309,7 @@
                         email: email2,
                         date: date2,
                         description: description2,
-                        service_id: service_id2,
+                        //service_id: service_id2,
                         state: state2,
                         _token: _token2
                     },

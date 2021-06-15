@@ -33,10 +33,10 @@
                         </div>
                     </div>
                     <div class="form-inline">
-                        <div class="form-group">
+                        <!--<div class="form-group">
                             <label style="cursor: text;"><b>SERVICIO:</b></label>
                             <input type="text" class="form-control my-2" id="txtService" name="txtService" onmousedown="return false" readonly="readonly" value="{{ old('txtService') }}" style="border: 0; outline:none; background-color: white; cursor: text;">
-                        </div>
+                        </div>-->
                         <div class="form-group">
                             <label style="cursor: text;"><b>DESCRIPCIÓN:</b></label>
                             <textarea class="form-control my-2" id="txtDescription" name="txtDescription" rows="3" cols="40" onmousedown="return false" readonly="readonly" value="{{ old('txtTime') }}" style="border: 0; outline:none; background-color: white; cursor: text;"></textarea>

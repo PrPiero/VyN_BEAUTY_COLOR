@@ -23,7 +23,8 @@ class QuotesController extends Controller
 
             else
             {
-                $quotes = Quote::latest()->with('service')->get();
+                $quotes = Quote::latest()->get();
+                //$quotes = Quote::latest()->with('service')->get();
             }
 
             return DataTables::of($quotes)
@@ -41,7 +42,8 @@ class QuotesController extends Controller
 
     public function edit(Quote $id)
     {
-        $quote = Quote::with('service')->find($id);
+        //$quote = Quote::with('service')->find($id);
+        $quote = Quote::find($id);
         return response()->json($quote);
     }
 
