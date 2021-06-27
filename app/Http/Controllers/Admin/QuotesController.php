@@ -7,7 +7,7 @@ use App\Models\Quote;
 use Illuminate\Http\Request;
 use App\Mail\MessageReceived;
 use Illuminate\Support\Facades\Mail;
-use DataTables;
+use Yajra\DataTables\DataTables;
 use Illuminate\Support\Facades\DB;
 
 class QuotesController extends Controller

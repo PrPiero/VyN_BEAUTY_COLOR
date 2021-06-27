@@ -6,13 +6,10 @@
     <title>{{ config('app.name') }}</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <link rel="stylesheet" href="/adminlte/css/adminlte.min.css">
     <link rel="stylesheet" href="/assets/login/style.css">
-    <script src="https://kit.fontawesome.com/935a263ba2.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    {{--@include('admin.partials.modal_auth', ['sessionLINK' => session()->has('flash'), 'sessionTEXT' => session('flash')])--}}
-
     <div class="login-container">
         <img class="image-container" src="/assets/login/images/imagen3.png" alt="">
         <div class="login-info-container">
@@ -28,7 +25,7 @@
                     <input class="input @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus type="text" name="email">
                     <i class="fas fa-envelope iconoemail"></i>
                     @error('email')
-                        <span class="invalid-feedback" role="alert" style="color: red; margin-bottom: 7rem;">
+                        <span class="invalid-feedback" role="alert" style="color: red;">
                             <strong>{{ $message }}</strong>
                         </span>
                     @enderror
@@ -53,6 +50,14 @@
             </p>-->
         </div>
     </div>
+    @include('admin.partials.modal_auth', ['sessionLINK' => session()->has('flash'), 'sessionTEXT' => session('flash')])
+
+    <!-- jQuery -->
+    <script src="/adminlte/plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="/adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Fonts Awesome -->
+    <script src="https://kit.fontawesome.com/935a263ba2.js" crossorigin="anonymous"></script>
 
     <script>$('#exampleModal').modal('show');</script>
 </body>

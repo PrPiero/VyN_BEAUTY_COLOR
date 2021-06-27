@@ -52,8 +52,8 @@ body {
     font-weight: normal;
     font-size: 2em;
     font-weight: 500;
-   margin-bottom: 5px;
-   margin-top: 10px;
+    margin-bottom: 5px;
+    margin-top: 10px;
     display: inline-block;
     text-align: center;
 }
@@ -66,7 +66,7 @@ body {
 }
 
 .title {
-    
+
     font-size: 2.1rem;
     font-weight: 600;
     letter-spacing: 1px;
@@ -74,9 +74,9 @@ body {
     font-family: Rochester;
     font-style: normal;
     font-weight: normal;
-  
+
     line-height: 45px;
-   
+
     margin-bottom: 20px;
     display: inline-block;
 }
@@ -147,17 +147,17 @@ body {
     }
 
 @media screen and (max-width: 1200px) {
-    
+
     .login-info-container {
         width: 50%;
         border-radius: 5px;
         float: left;
     }
-    
+
     .image-container {
         width: 50%;
         float: left;
-    }  
+    }
 }
 
 @media screen and (max-width: 992px) {
@@ -166,11 +166,11 @@ body {
         border-radius: 5px;
         float: left;
     }
-    
+
     .image-container {
         width: 50%;
         float: left;
-    }  
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -179,11 +179,11 @@ body {
         border-radius: 5px;
         float: left;
     }
-    
+
     .image-container {
         width: 100%;
         float: left;
-    }  
+    }
 
     .login-info-container > p {
         margin: 0;
@@ -208,9 +208,9 @@ body {
 
 .inputs-container input:focus{
 
-  
+
         outline: none;
-   
+
 }
 
 

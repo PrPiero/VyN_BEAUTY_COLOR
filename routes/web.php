@@ -5,6 +5,7 @@ use App\Http\Controllers\CitasController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
+// Principal...
 Route::get('', function(){
     return view('ecommerce');
 })->name('index');
@@ -18,11 +19,25 @@ Route::get('ReservarCita/Show', [CitasController::class, 'show'] )->name('citas.
 // Admin Routes...
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'auth'], function(){
     Route::group(['middleware' => 'cached'], function(){
+        //Principal...
         Route::get('', 'DashboardController@index')->name('admin');
-        Route::get('citas', 'QuotesController@index')->name('admin.quotes.index');
-        Route::get('citas/editar/{id}', 'QuotesController@edit')->name('admin.quotes.edit');
-        Route::post('citas/actualizar', 'QuotesController@update')->name('admin.quotes.update');
-        Route::post('citas/enviar-email', 'MessageController@store')->name('admin.messages.store');
+
+        //Citas...
+        Route::group(['prefix' => 'citas'], function(){
+            Route::get('', 'QuotesController@index')->name('admin.quotes.index');
+            Route::get('editar/{id}', 'QuotesController@edit')->name('admin.quotes.edit');
+            Route::post('actualizar', 'QuotesController@update')->name('admin.quotes.update');
+            Route::post('enviar-email', 'MessageController@store')->name('admin.messages.store');
+        });
+
+        //Usuarios...
+        Route::group(['prefix' => 'usuarios'], function(){
+            Route::get('', 'UsersController@index')->name('admin.users.index');
+            Route::post('', 'UsersController@store')->name('admin.users.store');
+            Route::get('eliminar/{id}', 'UsersController@destroy')->name('admin.users.destroy');
+            Route::get('editar/{id}', 'UsersController@edit')->name('admin.users.edit');
+            Route::post('actualizar', 'UsersController@update')->name('admin.users.update');
+        });
     });
 });
 
