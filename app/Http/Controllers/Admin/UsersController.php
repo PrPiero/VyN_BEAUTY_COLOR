@@ -22,7 +22,7 @@ class UsersController extends Controller
         {
             if (!empty($request->from_date))
             {
-                $users = DB::table('users', 'roles')->whereBetween('created_at', array($request->from_date, $request->to_date))->get();
+                $users = User::with('roles')->whereBetween('created_at', array($request->from_date, $request->to_date))->get();
             }
 
             else

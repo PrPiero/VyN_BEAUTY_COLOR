@@ -10,6 +10,10 @@ Route::get('', function(){
     return view('ecommerce');
 })->name('index');
 
+/*Route::get('email', function(){
+    return new App\Mail\LoginCredentials(App\Models\User::first(), 'password');
+});*/
+
 // Reservar Cita...
 Route::get('ReservarCita', [CitasController::class, 'index'] )->name('citas.index');
 Route::get('ReservarCita/Create', [CitasController::class, 'create'] )->name('citas.create');
@@ -19,7 +23,7 @@ Route::get('ReservarCita/Show', [CitasController::class, 'show'] )->name('citas.
 // Admin Routes...
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'auth'], function(){
     Route::group(['middleware' => 'cached'], function(){
-        //Principal...
+        //Principal Administración...
         Route::get('', 'DashboardController@index')->name('admin');
 
         //Citas...

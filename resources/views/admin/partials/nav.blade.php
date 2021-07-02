@@ -100,19 +100,21 @@
                 </li>
             </ul>
         </li>
-        <li class="nav-item has-treeview {{ request()->is('admin/usuarios') ? 'menu-open' : '' }}">
-            <a href="#" class="nav-link {{ request()->is('admin/usuarios') ? 'active' : '' }}">
-                <i class="nav-icon fas fa-users-cog"></i>
-                <p>Usuarios<i class="right fas fa-angle-left"></i></p>
-            </a>
-            <ul class="nav nav-treeview">
-                <li class="nav-item">
-                    <a href="{{ route('admin.users.index') }}" class="nav-link {{ request()->is('admin/usuarios') ? 'active' : '' }}">
-                        <i class="far fa-address-book nav-icon"></i>
-                        <p>Lista de usuarios</p>
-                    </a>
-                </li>
-            </ul>
-        </li>
+        @if (Auth::user()->roles->first()->name == 'Administrador')
+            <li class="nav-item has-treeview {{ request()->is('admin/usuarios') ? 'menu-open' : '' }}">
+                <a href="#" class="nav-link {{ request()->is('admin/usuarios') ? 'active' : '' }}">
+                    <i class="nav-icon fas fa-users-cog"></i>
+                    <p>Usuarios<i class="right fas fa-angle-left"></i></p>
+                </a>
+                <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                        <a href="{{ route('admin.users.index') }}" class="nav-link {{ request()->is('admin/usuarios') ? 'active' : '' }}">
+                            <i class="far fa-address-book nav-icon"></i>
+                            <p>Lista de usuarios</p>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        @endif
     </ul>
 </nav>

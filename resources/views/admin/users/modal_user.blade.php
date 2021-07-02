@@ -21,15 +21,15 @@
                     <div class="form-inline">
                         <div class="container-fluid form-inline row">
                             <label style="cursor: text; display: inline-block; width: 130px;"><b>NOMBRES:</b></label>
-                            <input type="text" class="form-control my-2 col-lg-8" id="name2" name="name2" value="{{ old('name2') }}">
+                            <input type="text" class="form-control my-2 col-lg-8" id="name2" name="name2">
                         </div>
                         <div class="container-fluid form-inline row">
                             <label style="cursor: text; display: inline-block; width: 130px;"><b>APELLIDOS:</b></label>
-                            <input type="text" class="form-control my-2 col-lg-8" id="surname2" name="surname2" value="{{ old('surname2') }}">
+                            <input type="text" class="form-control my-2 col-lg-8" id="surname2" name="surname2">
                         </div>
                         <div class="container-fluid form-inline row">
                             <label style="cursor: text; display: inline-block; width: 130px;"><b>DNI:</b></label>
-                            <input type="text" class="form-control my-2 col-lg-8" id="dni2" name="dni2" value="{{ old('dni2') }}">
+                            <input type="text" class="form-control my-2 col-lg-8" id="dni2" name="dni2">
                         </div>
                         <div class="container-fluid form-inline row">
                             <label style="cursor: text; display: inline-block; width: 130px;"><b>ESTADO:</b></label>
@@ -49,16 +49,8 @@
                         </div>
                         <div class="container-fluid form-inline row">
                             <label style="cursor: text; display: inline-block; width: 130px;"><b>EMAIL:</b></label>
-                            <input type="email" class="form-control my-2 col-lg-8" id="email2" name="email2" value="{{ old('email2') }}">
+                            <input type="email" class="form-control my-2 col-lg-8" id="email2" name="email2">
                         </div>
-                        <!--<div class="container-fluid form-inline row">
-                            <label style="cursor: text; display: inline-block; width: 130px;"><b>CONTRASEÑA:</b></label>
-                            <input type="password" class="form-control my-2 col-lg-8" id="password" name="password" autocomplete>
-                        </div>
-                        <div class="container-fluid form-inline row">
-                            <label style="cursor: text; display: inline-block; width: 130px;"><b>CONFIRMAR CONTRASEÑA:</b></label>
-                            <input type="password" class="form-control my-2 col-lg-8" id="password_confirmation" name="password_confirmation" autocomplete>
-                        </div>-->
                     </div>
                 </div>
                 <div class="modal-footer justify-content-between">
